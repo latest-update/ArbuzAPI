@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Custom\Response\ShortResponse;
-use App\Models\Row;
 use App\Models\Watermelon;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class ArbuzController extends Controller
 {
