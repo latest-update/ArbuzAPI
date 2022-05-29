@@ -17,7 +17,10 @@ class Purchased_watermelons extends Model
     public static function setPurchasedWatermelons(array $order)
     {
         try {
-            $watermelons = collect($order['purchase'])->map(function ($item) use ($order){
+            $watermelons = collect($order['purchase']);
+            Watermelon::whereIn('id', $watermelons->map(fn($item) => $item['id']) )->delete();
+
+            $watermelons = $watermelons->map(function ($item) use ($order){
                 return [
                     'status' => $item['status'],
                     'weight' => $item['weight'],
@@ -27,8 +30,6 @@ class Purchased_watermelons extends Model
         } catch (ErrorException $e) {
             throw new InvalidPurchaseException();
         }
-
-        Watermelon::whereIn('id', $watermelons->map(fn($item) => $item['id']) )->delete();
 
         static::upsert(
             $watermelons->toArray(),
