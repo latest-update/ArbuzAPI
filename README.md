@@ -14,4 +14,4 @@
 
 
 ### Data model
-<img src="https://github.com/latest-update/ArbuzAPI/blob/main/Db.png?raw=true" width="700">
+<center><img src="https://github.com/latest-update/ArbuzAPI/blob/main/Db.png?raw=true" width="600"></center>
