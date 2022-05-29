@@ -11,3 +11,7 @@
 - Composer
 
 [Документацию Postman](https://www.postman.com/grabit-corparation/workspace/arbuzapi/overview)
+
+
+### Data model
+<center><img src="https://github.com/latest-update/ArbuzAPI/blob/main/Db.png?raw=true" width="600"></center>
